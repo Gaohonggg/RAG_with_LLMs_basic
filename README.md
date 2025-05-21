@@ -13,7 +13,19 @@ This project demonstrates how to build an **offline RAG (Retrieval-Augmented Gen
 
 ## 📂 Project Structure
 
-<pre> project_root/ ├── test.py # Entry point to run RAG loop ├── src/ │ ├── base/ │ │ └── llm_model.py # Load TinyLlama + quantization │ └── rag/ │ ├── main.py # Build RAG pipeline │ ├── file_loader.py # Load & chunk PDF files │ ├── vectorstore.py # FAISS/Chroma vector DB │ ├── offline_rag.py # Chain prompt → LLM → output parser │ └── utils.py # Text extract utilities └── data_source/ └── generative_ai/ # Folder containing your PDF files </pre>
+<pre> project_root/ 
+  ├── test.py # Entry point to run RAG loop 
+  ├── src/ 
+  |    ├── base/ 
+  │    │    └── llm_model.py # Load TinyLlama + quantization 
+  │    └── rag/ 
+  │         ├── main.py # Build RAG pipeline 
+  │         ├── file_loader.py # Load & chunk PDF files 
+  │         ├── vectorstore.py # FAISS/Chroma vector DB 
+  │         ├── offline_rag.py # Chain prompt → LLM → output parser 
+  │         └── utils.py # Text extract utilities 
+  └── data_source/ 
+       └── generative_ai/ # Folder containing your PDF files </pre>
 
 ## ▶️ Run the system
 python test.py
