@@ -36,13 +36,7 @@ class Str_OutputParser(StrOutputParser):
 class Offline_RAG:
     def __init__(self, llm) -> None:
         self.llm = llm
-        self.prompt = ChatPromptTemplate.from_template(
-            """Context:\n
-            {context}\n\n
-            Question:\n
-            {question}\n\n
-            Answer:"""
-            )
+        self.prompt = hub.pull("rlm/rag-prompt")
         self.str_parser = Str_OutputParser()
 
     def get_chain(self, retriever):
