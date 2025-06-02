@@ -10,7 +10,7 @@ nf4_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16,
 )
 
-def get_hf_llm(model_name: str = "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+def get_hf_llm(model_name: str = "meta-llama/Llama-3.2-3B-Instruct",
                max_new_token=1024,
                **kwargs):
     
@@ -19,10 +19,14 @@ def get_hf_llm(model_name: str = "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
         quantization_config=nf4_config,
         trust_remote_code=True,
         low_cpu_mem_usage=True,
-        token=""
+        device_map="auto",
+        token=
     )
     
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name,
+        token=
+    )
     
     model_pipeline = pipeline(
         "text-generation",
