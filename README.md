@@ -3,7 +3,7 @@
 
 This project demonstrates how to build an **offline RAG (Retrieval-Augmented Generation)** pipeline using:
 
-- 💬 **TinyLlama-1.1B-Chat-v1.0** for local language modeling
+- 💬 **Meta-llama/Llama-3.2-3B-Instruct** for local language modeling
 - 🧱 **LangChain** for chaining retriever + prompt + LLM
 - 📄 **PDF file ingestion and chunking**
 - 🔍 **Vector search with FAISS or Chroma**
@@ -17,7 +17,7 @@ This project demonstrates how to build an **offline RAG (Retrieval-Augmented Gen
   ├── test.py # Entry point to run RAG loop 
   ├── src/ 
   |    ├── base/ 
-  │    │    └── llm_model.py # Load TinyLlama + quantization 
+  │    │    └── llm_model.py # Load Llama + quantization 
   │    └── rag/ 
   │         ├── main.py # Build RAG pipeline 
   │         ├── file_loader.py # Load & chunk PDF files 
